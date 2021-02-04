@@ -6,5 +6,24 @@
 </head>
 <body>
 <h1>Basic app : <span th:text="${appName}"></span></h1>
+<div><span th:text="#{current.locale}"></span><span th:text="${#locale}"></span>
+    <select id="language">
+        <option value=""></option>
+        <option value="en" th:text="#{lang.eng}"></option>
+        <option value="pl" th:text="#{lang.pl}"></option>
+    </select>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#language").change(function () {
+        var selectedOption = $('#language').val();
+        if (selectedOption != ''){
+            window.location.replace('language?lang=' + selectedOption);
+        }
+    });
+});
+</script>
 </body>
 </html>

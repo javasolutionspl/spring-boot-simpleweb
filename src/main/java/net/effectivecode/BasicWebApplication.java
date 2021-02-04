@@ -8,8 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = "net.effectivecode")
 public class BasicWebApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BasicWebApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(BasicWebApplication.class, args);
+    }
 }
